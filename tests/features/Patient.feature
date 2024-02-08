@@ -25,7 +25,7 @@ Feature: Patient
       | admin    | pass     | john  | wick     | 2024-02-08 | Female | Medical Record Dashboard - john wick |
       | admin    | pass     | kim   | saul     | 2024-02-08 | Male   | Medical Record Dashboard - kim saul  |
 
-#
+
 #  @addpatient
 #  Scenario: Add Valid Patient Record
 #    Given I have browser with OpenEMR application
