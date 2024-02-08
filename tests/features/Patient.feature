@@ -25,7 +25,21 @@ Feature: Patient
       | admin    | pass     | john  | wick     | 2024-02-08 | Female | Medical Record Dashboard - john wick |
       | admin    | pass     | kim   | saul     | 2024-02-08 | Male   | Medical Record Dashboard - kim saul  |
 
-
-
-
+#
+#  @addpatient
+#  Scenario: Add Valid Patient Record
+#    Given I have browser with OpenEMR application
+#    When I enter username as "admin"
+#    And I enter password as "pass"
+#    And I click on login
+#    And I click on Patient menu
+#    And I click on New Search menu
+#    And I fill the patient details form
+#      | firstname | lastname | dob        | gender |
+#      | john      | wick     | 2024-02-08 | Male   |
+#    And I click on create new patient
+#    And I click on confirm create new patient
+#    And I handle the alert box
+#    And I close the birthday popup if available
+#    Then I should get the added patient record as "Medical Record Dashboard - john wick"
 
