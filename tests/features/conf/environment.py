@@ -6,7 +6,7 @@ from tests.features.pages.search_add_page import SearchOrAddPatientPage
 
 
 def browser_config(context):
-    context.driver = webdriver.Chrome()
+    context.driver = webdriver.Edge()
     context.driver.maximize_window()
     context.driver.implicitly_wait(10)
     context.driver.get("https://demo.openemr.io/b/openemr")
