@@ -3,14 +3,16 @@ from behave import *
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
-from tests.features.conf.environment import browser_config,init_page_objects
+from tests.features.conf.environment import browser_config, init_page_objects
+from tests.features.pages.login_page import LoginPage
+from tests.features.pages.main_page import MainPage
+from tests.features.pages.search_add_page import SearchOrAddPatientPage
 
 
 @given(u'I have browser with OpenEMR application')
 def step_impl(context):
     browser_config(context)
     init_page_objects(context)
-
 
 @when(u'I enter username as "{text}"')
 def step_impl(context, text):

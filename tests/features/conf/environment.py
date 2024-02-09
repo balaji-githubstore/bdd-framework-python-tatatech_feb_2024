@@ -10,7 +10,9 @@ def browser_config(context):
     context.driver.maximize_window()
     context.driver.implicitly_wait(10)
     context.driver.get("https://demo.openemr.io/b/openemr")
+
+
 def init_page_objects(context):
     context.login = LoginPage(context.driver)
     context.main = MainPage(context.driver)
-    context.search=SearchOrAddPatientPage(context.driver)
+    # context.search = SearchOrAddPatientPage(context.driver)
