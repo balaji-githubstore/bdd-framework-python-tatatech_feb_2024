@@ -3,31 +3,31 @@ from behave import *
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
+from tests.features.conf.environment import browser_config,init_page_objects
+
 
 @given(u'I have browser with OpenEMR application')
 def step_impl(context):
-    context.driver = webdriver.Chrome()
-    context.driver.maximize_window()
-    context.driver.implicitly_wait(10)
-    context.driver.get("https://demo.openemr.io/b/openemr")
-
-
+    browser_config(context)
+    init_page_objects(context)
 
 
 @when(u'I enter username as "{text}"')
 def step_impl(context, text):
-    context.driver.find_element(By.ID, "authUser").send_keys(text)
+    # context.driver.find_element(By.ID, "authUser").send_keys(text)
+    context.login.enter_username(text)
 
 
 @when(u'I enter password as "{text}"')
 def step_impl(context, text):
-    context.driver.find_element(By.ID, "clearPass").send_keys(text)
+    # context.driver.find_element(By.ID, "clearPass").send_keys
+    context.login.enter_password(text)
 
 
 @when(u'I click on LOGIN')
 def step_impl(context):
-    context.driver.find_element(By.ID, "login-button").click()
-
+    # context.driver.find_element(By.ID, "login-button").click()
+    context.login.click_on_login()
 
 @then(u'I should get access to portal with title "{text}"')
 def step_impl(context, text):
